@@ -48,3 +48,15 @@ const moveOnCategory = (id) => {
   localStorage.setItem("category", JSON.stringify(id));
   window.location.href = "./pages/Category.html";
 };
+
+const getUserData = () => {
+  let check = localStorage.getItem("products");
+
+  if (check !== null) {
+    document.getElementById("cartValue").style.display = "block";
+    let data = JSON.parse(check);
+    document.getElementById("cartValue").innerHTML = data.length;
+  }
+};
+
+getUserData();

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Store</title>
+    <title>Cart Page</title>
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
@@ -54,11 +54,11 @@
 
         <nav class="navbar">
           <a href="../index.html">home</a>
-          <a href="#product">product</a>
+          <a href="#product">Products</a>
         </nav>
 
         <div class="icons">
-          <a href="./Cart.html" class="fas fa-shopping-cart">
+          <a href="#" class="fas fa-shopping-cart">
             <span id="cartValue"></span>
           </a>
           <a href="#" class="fas fa-heart"></a>
@@ -72,9 +72,7 @@
         <h2>Loading...</h2>
       </div>
       <div style="margin-top: 20px; margin-bottom: 20px" id="showCards">
-        <h1 class="heading" id="categoryName"></h1>
-
-        <div class="box-container" id="box-container"></div>
+        <div class="cart-table" id="mainContainer"></div>
       </div>
     </section>
 
@@ -138,6 +136,6 @@
     <!-- footer section ends -->
 
     <!-- custom js file link  -->
-    <script src="../js/category.js"></script>
+    <script src="../js/cart.js"></script>
   </body>
 </html>
