@@ -334,7 +334,7 @@ section{
 }
 
 .product .box-container .box .price span{
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color:#999;
   text-decoration: line-through;
 }
@@ -539,7 +539,10 @@ section{
   color:var(--green);
 }
 
-
+#old{
+color: lightgray;
+text-decoration: line-through;
+}
 
 
 
@@ -663,7 +666,7 @@ section{
   }
 
   .deal .content .count-down .box span{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
 }
