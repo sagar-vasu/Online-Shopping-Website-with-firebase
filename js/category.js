@@ -168,8 +168,21 @@ const addTocartBtn = (product) => {
     document.getElementById("cartValue").innerHTML = allProducts.length;
   } else {
     let data = JSON.parse(check);
-    data.push(product);
-    localStorage.setItem("products", JSON.stringify(data));
-    document.getElementById("cartValue").innerHTML = data.length;
+
+    var flag = true;
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].key === product.key) {
+        flag = false;
+        let newQuantity = Number(data[i].quantity) + Number(product.quantity);
+        data[i].quantity = newQuantity;
+        localStorage.setItem("products", JSON.stringify(data));
+        document.getElementById("cartValue").innerHTML = data.length;
+      }
+    }
+    if (flag === true) {
+      data.push(product);
+      localStorage.setItem("products", JSON.stringify(data));
+      document.getElementById("cartValue").innerHTML = data.length;
+    }
   }
 };

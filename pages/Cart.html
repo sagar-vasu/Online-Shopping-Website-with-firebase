@@ -9,6 +9,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/cart.css" />
 
@@ -68,11 +78,24 @@
     </header>
 
     <section class="product" style="margin-top: 100px" id="product">
-      <div style="text-align: center" id="loader">
-        <h2>Loading...</h2>
+      <div style="text-align: center">
+        <h2 id="text"></h2>
       </div>
       <div style="margin-top: 20px; margin-bottom: 20px" id="showCards">
-        <div class="cart-table" id="mainContainer"></div>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col" class="text-white">Product</th>
+              <th scope="col" class="text-white">Title</th>
+              <th scope="col" class="text-white">Price</th>
+              <th scope="col" class="text-white">Quantity</th>
+              <th scope="col" class="text-white">Total</th>
+              <th scope="col" class="text-white">Remove</th>
+            </tr>
+          </thead>
+          <tbody id="main-Container"></tbody>
+        </table>
+        <h3 id="total"></h3>
       </div>
     </section>
 
