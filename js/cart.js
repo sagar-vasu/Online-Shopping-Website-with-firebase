@@ -53,6 +53,8 @@ let showProducts = (data) => {
       tRow.appendChild(tdTotal);
       let removeTd = document.createElement("td");
       let close = document.createElement("i");
+
+      totalPrice += element.productPrice * element.quantity;
       close.setAttribute("class", "fas fa-trash");
       close.addEventListener("click", () => {
         if (data.length > 1) {
@@ -60,6 +62,8 @@ let showProducts = (data) => {
           localStorage.setItem("products", JSON.stringify(data));
           tRow.remove();
           document.getElementById("cartValue").innerHTML = data.length;
+          totalPrice = totalPrice - element.productPrice * element.quantity;
+          document.getElementById("total").innerHTML = "Total: " + totalPrice;
         } else {
           localStorage.removeItem("products");
           tRow.remove();
@@ -72,10 +76,8 @@ let showProducts = (data) => {
       removeTd.appendChild(close);
       tRow.appendChild(removeTd);
       mainCard.appendChild(tRow);
-      totalPrice += element.productPrice * element.quantity;
+      document.getElementById("total").innerHTML = "Totals: " + totalPrice;
     });
-
-    document.getElementById("total").innerHTML = "Total: " + totalPrice;
   }
 };
 
